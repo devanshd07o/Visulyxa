@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* 1. FONT INJECTION: Bringing in our technical typography */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Syncopate:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { 
+  --void: #000000; 
+}
+
+/* 2. GLOBAL RESET: Establishing the Deep Black canvas */
+body {
+  margin: 0; 
+  padding: 0;
+  background-color: var(--void);
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden; /* Prevents unwanted horizontal jitter */
+  overflow-y: auto;
+  min-height: 100vh;
+  /* Smooths the mobile experience */
+  overscroll-behavior-y: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 3. CUSTOM SCROLLBAR: Sleek, dark, and professional */
+::-webkit-scrollbar { 
+  width: 6px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: #000; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: #333; 
+  border-radius: 3px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* 4. UTILITY CLASSES: For the cinematic text effect */
+.font-syncopate { font-family: 'Syncopate', sans-serif; }
+.font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+.font-cyber { font-family: 'Orbitron', sans-serif; }
